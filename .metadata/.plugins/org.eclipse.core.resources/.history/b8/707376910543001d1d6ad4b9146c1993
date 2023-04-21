@@ -1,0 +1,45 @@
+package Basics1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+
+public class taticDropdowns1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Static dropdowns
+		System.setProperty("webdriver.chrome.driver","E:\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		//if the dropsown has select tagname and the values are fixed then thay are called
+		// Static dropdwons
+		driver.get("https://rahulshettyacademy.com/dropdownsPractise//");
+		driver.manage().window().maximize();
+		WebElement drop=driver.findElement(By.cssSelector("#ctl00_mainContent_DropDownListCurrency"));
+		Select dropDown=new Select(drop);
+		//code to select USD
+		
+		int size=dropDown.getAllSelectedOptions().size();
+		System.out.println(size);
+	
+							
+			for(int i=0;i<3;i++)
+			{
+				if(dropDown.getFirstSelectedOption().getText().contentEquals("USD"))
+						{
+			dropDown.selectByIndex(i);
+				}
+			}
+			
+		
+		
+		System.out.println("Selected currency option is"+dropDown.getFirstSelectedOption().getText());
+		
+		
+	}
+
+}

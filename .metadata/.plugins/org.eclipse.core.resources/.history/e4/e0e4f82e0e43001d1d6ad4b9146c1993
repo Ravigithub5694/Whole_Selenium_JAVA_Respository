@@ -1,0 +1,22 @@
+package Basics1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class dynamicdrops {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//Handling dynamic dropdowns
+		
+		ystem.setProperty("webdriver.chrome.driver","E:\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://www.spicejet.com/");		
+		driver.findElement(By.xpath("//div[@data-testid='to-testID-origin']/div")).click();
+		
+		
+	}
+
+}

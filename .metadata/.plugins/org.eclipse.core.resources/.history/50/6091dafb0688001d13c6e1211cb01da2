@@ -1,0 +1,5 @@
+package ravikumaracademy.tests;
+
+public @interface Dataprovider {
+
+}

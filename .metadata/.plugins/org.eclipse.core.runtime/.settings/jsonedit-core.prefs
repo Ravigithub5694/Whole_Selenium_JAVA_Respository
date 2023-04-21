@@ -1,0 +1,4 @@
+BEGIN_OBJECT.prefix=SPACE
+BEGIN_OBJECT.suffix=NONE
+eclipse.preferences.version=1
+showWhitespaceInPrefPage=true
